@@ -1,39 +1,32 @@
 #include<stdio.h>
 
 int main(){
-	int n;
-	//Exercise 1 
-	printf("Enter the number of exersice 1 in system 16: ");
-	scanf("%d", &n);
-	//Exercise 2
-	printf("\nThe number in system 16: " );
-	printf("%h", n);
+	int a[7];
+	int *p = &a[7];
+	for(int i = 0; i <= 7; i++){
+		printf("Enter the number of array a a[%d]: ", i);
+		scanf("%d", &a[i]);
+	}
+	printf("\nArray a :");
+	for (int i = 0; i<=7;i++){
+		printf("%d ", *(a+i));
+	}
+	int *array = new int [7];
 	
-	// Exercise 3
-	printf("\nThe exercise 1 number in system 8: ");
-	printf("%o", n);
-	int n1;
-	printf("\nThe number in the same numeral system shifted left by 3 bits : ");
-	printf("%o", n1 = n<<3);
+	array[0] = -8;
+	array[1] = 8;
+	array[2] = 11;
+	array[3] = 2;
+	array[4] = 64;
+	array[5] = 67;
+	array[6]= 55;
+	array[7] = 32;
+	printf("\n\nThe new dynamic array : ");
+	for( int i = 0; i <= 7;i++){
+		printf("%d ", array[i]);
+	}
 	
-	// Exercise 4
-	printf("\nThe number in system 16: " );
-	printf("%o", n);
-	printf("\nThe same number in the same number system after applying the bitwise negation operation :");
-	printf("%o", ~n);
-	
-	
-	//Exercise 5
-	int n2;
-	printf("\nEnter the number of exercise 5 in system 8 :");
-	scanf("%d", &n2 );
-	printf("\nThe result of the specified bit operation XOR :");
-	printf("%o", n^n2);
-	printf("\nThe result of the specified bit operation OR : ");
-	printf("%o", n|n2);
-	
-	
-	
+	delete array;
 	return 0;
-							
+	
 }
